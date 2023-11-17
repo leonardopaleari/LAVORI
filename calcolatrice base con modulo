@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>calcolatrice windows</title>
+  </head>
+  <body>
+    <h3>check box</h3>
+    inserire primo numero<br>
+    <input type="text" id="n1">
+     <br>
+    inserire secondo numero<br>
+     <input type="text1" id="n2">\\\
+      <br>
+<br>
+  <input type="button" id=" btn" value="+" onclick="somma()">
+  <input type="button" id=" btn" value="-" onclick="sottrazione()">  
+  <input type="button" id=" btn" value="*" onclick="moltiplicazione()">
+  <input type="button" id=" btn" value="/" onclick="divisione()">
+ <input type="button" id=" btn" value="%" onclick="modulo()">
+   <p id="risultatooperazione"></p>
+
+<script>
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+function somma()
+{
+let n1 = parseInt(document.getElementById("n1").value);
+let n2 = parseInt(document.getElementById("n2").value);
+let somma=n1+n2
+document.getElementById("risultatooperazione").innerHTML = somma;
+}
+function sottrazione()
+{
+let n1 = parseInt(document.getElementById("n1").value);
+let n2 = parseInt(document.getElementById("n2").value);
+let differenza= n1-n2;
+document.getElementById("risultatooperazione").innerHTML = differenza;
+}
+function moltiplicazione()
+{
+let n1 = parseInt(document.getElementById("n1").value);
+let n2 = parseInt(document.getElementById("n2").value);
+let prodotto= n1*n2;
+document.getElementById("risultatooperazione").innerHTML = prodotto;
+}
+function divisione()
+{
+let n1 = parseInt(document.getElementById("n1").value);
+let n2 = parseInt(document.getElementById("n2").value);
+let quoziente= n1/n2;
+document.getElementById("risultatooperazione").innerHTML = quoziente;
+}
+function modulo()
+{
+let n1 = parseInt(document.getElementById("n1").value);
+let n2 = parseInt(document.getElementById("n2").value);
+let resto= n1%n2;
+document.getElementById("risultatooperazione").innerHTML = resto;
+}
+
+   </script>
+  </body>
+</html>
