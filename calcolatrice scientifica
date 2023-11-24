@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>calcolatrice windows</title>
+<br>
+</head>
+  <body>
+    <input type="text" id="immagineschermo" style="width: 200px; height: 50px">
+    <br>
+    <br>
+    <input type="button" id=" btn" value="7" onclick="shownumber('7')">
+    <input type="button" id=" btn" value="8" onclick="shownumber('8')">
+    <input type="button" id=" btn" value="9" onclick="shownumber('9')">
+    <button onclick="DEL()">DEL</button>
+    <button onclick="AC()">AC</button>
+    <br>
+    <br>
+
+    <input type="button" id=" btn" value="4" onclick="shownumber('4')">
+    <input type="button" id=" btn" value="5" onclick="shownumber('5')">
+    <input type="button" id=" btn" value="6" onclick="shownumber('6')">
+    <input type="button" id=" btn" value="*" onclick="shownumber('*')">
+    <input type="button" id=" btn" value="/" onclick="shownumber('/')">
+    <br><br>
+    <input type="button" id=" btn" value="1" onclick="shownumber('1')">
+    <input type="button" id=" btn" value="2" onclick="shownumber('2')">
+    <input type="button" id=" btn" value="3" onclick="shownumber('3')">
+    <input type="button" id=" btn" value="+" onclick="shownumber('+')">
+    <input type="button" id=" btn" value="-" onclick="shownumber('-')">
+    <br>
+    <br>
+    <input type="button" id=" btn" value="0" onclick="shownumber('0')">
+    <button onclick="shownumber('.')">.</button>
+    <button onclick="calcolo()">=</button>
+    <br>
+    <br>
+    <button onclick="shownumber('%')">%</button>
+    <button onclick="shownumber('^')">^</button>
+    <button onclick="shownumber('√')">√</button>
+    <br>
+    <script>
+      function shownumber(num) 
+      {
+        document.getElementById("immagineschermo").value += num;
+      }
+
+      function AC() 
+      {
+        document.getElementById("immagineschermo").value = "";
+      }
+      function DEL() 
+      {
+        
+      }
+      let operatore="+,-,*,/,^,√,%"
+      function calcolo(n1, n2, operatore) 
+      {
+        switch (operatore) 
+         {
+          case '+':
+            return n1 + n2;
+          case '-':
+            return n1 - n2;
+          case '*':
+            return n1 * n2;
+          case '/':
+            if (n2 != 0) 
+            {
+              return n1 / n2;          
+              }
+            else 
+            {
+              return -10000;
+            }
+          case '^':
+            return Math.pow(n1, n2);
+          case '√':
+            return Math.sqrt(n2);
+          case '%':
+            return n1 % n2;
+          default:
+          }
+      }
+    </script>
+    
+    <br>
+ </body>
+</html>
