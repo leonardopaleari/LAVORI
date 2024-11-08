@@ -1,0 +1,45 @@
+<html>
+<body>
+
+<h2>Magazzino</h2>
+
+<table id="a"></table>
+<input id="b" type="button" onclick="Leggi();" value="Lettura dei dati">
+
+
+<script>
+function Leggi() {
+    let dati = new XMLHttpRequest();
+    
+   dati.open("GET", "http://localhost/data.json", true); 
+   
+    dati.send(); 
+
+    dati.onload = function() {
+        if (dati.status === 200) { 
+            const object = JSON.parse(dati.responseText);
+
+            let str = "<tr><th>Nome</th><th>Categoria</th><th>Prezzo</th><th>Quantita</th><th>Totale</th></tr>";
+
+            for (let i = 0; i < object.magazzino.length; i++) { 
+                str += "<tr><td>" + object.magazzino[i].nome + "</td><td>" + 
+                        object.magazzino[i].categoria +"</td><td>" + 
+                        object.magazzino[i].prezzo +"</td><td>" + 
+                        object.magazzino[i].quantita +"</td><td>" + 
+                        (object.magazzino[i].prezzo * object.magazzino[i].quantita) + 
+                        "<td><a href =" + object.magazzino[i].img> + "</a><img src = "+ object.magazzino[i].img + "style=width:300;height:200>" + "</img></td>"
+            }
+            
+            document.getElementById("a").innerHTML = str; 
+        } else {
+            alert("Errore nel caricamento del file: " + dati.status); 
+        }
+        document.getElementById("b").disabled = false; 
+    };
+
+    document.getElementById("b").disabled = true;
+}
+</script>
+
+</body>
+</html>
