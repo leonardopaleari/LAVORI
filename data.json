@@ -1,0 +1,46 @@
+{
+   "magazzino":[
+      {
+         "nome":"mozzarella",
+         "categoria":"latticini",
+         "prezzo":1,
+         "quantita":40,
+         "img":"https://upload.wikimedia.org/wikipedia/commons/5/57/Mozzarella_di_bufala3.jpg"
+      },
+      {
+         "nome":"pomodori pelati",
+         "categoria":"verdura",
+         "prezzo":3,
+         "quantita":10,
+         "img":"https://megadolciaria.it/wp-content/uploads/2020/08/PELATI.jpeg"
+      },
+      {
+         "nome":"patate",
+         "categoria":"tubero",
+         "prezzo":1,
+         "quantita":100,
+         "img":"https://wips.plug.it/cips/buonissimo.org/cms/2013/04/adobestock_34718294-1.jpeg?w=668&a=c&h=382"
+      },
+      {
+         "nome":"merluzzo",
+         "categoria":"pesce",
+         "prezzo":5,
+         "quantita":23,
+         "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOHt3cvGJ1aOpvEEdQ-OMylgvhUjIe1g5KmQ&s"
+      },
+      {
+         "nome":"maionese",
+         "categoria":"salsa",
+         "prezzo":2,
+         "quantita":56,
+         "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmU8TftKqVVfQWh-YCrFuDcZSSVAfXTLISPA&s"
+      },
+      {
+         "nome":"coca cola",
+         "categoria":"bibite",
+         "prezzo":2,
+         "quantita":48,
+         "img":"https://www.lansgrupo.com/wp-content/uploads/2022/06/Coca-Cola-2.25-L-Bottle.jpg"
+      }
+   ]
+}
